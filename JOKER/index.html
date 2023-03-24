@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joker | landing page UI design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"><img src="logo.png"></a>
+        <div class="toggle"><img src="toggle.png"></div>
+    </header>
+    <div class="banner">
+        <div class="content">
+            <h2>Vamos Colocar <span> Um Sorriso </span> Nesse Rosto</h2>
+            <p>Isolado, intimidado e desconsiderado pela sociedade,
+                o fracassado comediante Arthur Fleck inicia seu
+                caminho como uma mente criminosa após assassinar
+                três homens em pleno metrô. Sua ação inicia um
+                movimento popular contra a elite de Gotham City,
+                da qual Thomas Wayne é seu maior representante.
+                E assim da o inicio ao grande espetaculo do Coringa</p>
+
+            <body onload='window.history.back();'></body>
+            <a href="#" class="play" onclick="toggle();"><img src="play.png">Watch trailer</a>
+            <div class="slide"></div>
+            <ul class="sci">
+                <li><a href="#"><img src="facebook.png"></a></li>
+                <li><a href="#"><img src="twitter.png"></a></li>
+                <li><a href="#"><img src="instagram.png"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="trailer">
+        <video src="trailer.mp4" controls="true"></video>
+        <img src="close.png" class="close" onclick="toggle();">
+    </div>
+    <script type="text/javascript">
+        function toggle() {
+            var trailer = document.querySelector('.trailer');
+            var video = document.querySelector('video');
+            trailer.classList.toggle('active')
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+</body>
+
+</html>
